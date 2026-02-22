@@ -1,7 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://dpvahkpklchmmtrnetyc.supabase.co';
-const supabaseAnonKey = 'sb_publishable_KZt8Amt_e3ljKvDP-3Fyhg_ZhZ-Qk0p';
+// This tells Vite to look for these variables in Vercel or your .env file
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
